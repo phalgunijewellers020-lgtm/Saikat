@@ -1,0 +1,6 @@
+{
+  "name": "Saikat Photography – Luxury Visuals & Studio CMS",
+  "description": "Official website and bespoke management studio for Saikat Photography, featuring cinematic wedding, portrait, and editorial galleries with full CMS control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

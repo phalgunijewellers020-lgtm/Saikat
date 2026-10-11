@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-red: #D91B24;
+    --brand-dark: #050505;
+    --brand-card: #0D0D0D;
+    --brand-border: #1F1F1F;
+    --brand-text: #FFFFFF;
+    --brand-muted: #A3A3A3;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: var(--brand-dark);
+    color: var(--brand-text);
+    overflow-x: hidden;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080808;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D91B24;
+  }
+}
+
+.font-serif-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+.font-display-modern {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-signature {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* Subtle cinematic noise overlay utility */
+.cinematic-vignette {
+  background: radial-gradient(circle at center, transparent 35%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+/* ==========================================================================
+   PRINT MEDIA STYLES - Crisp White Paper Formatting for Admin Guidebook
+   ========================================================================== */
+@media print {
+  /* Hide navigation, sidebars, headers, action buttons, toolbars */
+  aside,
+  header,
+  nav,
+  .no-print,
+  .print-hide,
+  input {
+    display: none !important;
+  }
+
+  /* Reset layout constraints so all pages can print without scroll truncation */
+  html,
+  body,
+  #root,
+  .min-h-screen,
+  main {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  body {
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+    color: #111111 !important;
+    background-color: #ffffff !important;
+  }
+
+  /* Guide section cards */
+  .rounded-xl {
+    border: 1px solid #d1d5db !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    page-break-inside: avoid;
+    margin-bottom: 1rem !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+
+  p, li, span, strong {
+    color: #222222 !important;
+  }
+
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1 !important;
+    padding: 6pt 8pt !important;
+    color: #111111 !important;
+    background-color: #ffffff !important;
+  }
+
+  th {
+    background-color: #f1f5f9 !important;
+    font-weight: 700 !important;
+  }
+
+  code {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    border: 1px solid #e2e8f0 !important;
+    padding: 2px 4px !important;
+    border-radius: 3px !important;
+    font-family: monospace !important;
+  }
+
+  a {
+    color: #000000 !important;
+    text-decoration: underline !important;
+  }
+}
+
+
